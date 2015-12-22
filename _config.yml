@@ -1,14 +1,61 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url:                    http://wolfienet.com
+domain:                 wolfienet.com
+name:                   WolfieNET / ITGuyOnline
+title:                  Kurt Wolf
+description:            Technology - Photography - And other random interests
+
+author:                 Kurt Wolf
+email:                  itguy614@gmail.com
+
+twitter:                itguy614
+facebook:               kurt.wolf
+github:                 itguy614
+
+sitemap:
+    include:            ["/index.html"]
+
+# Where things are
+source:                 .
+destination:            ./_site
+layouts_dir:                ./_layouts
+plugins_dir:                ./_plugins
+
+# Handling Reading
+safe:                   false
+include:                [".htaccess"]
+exclude:                [
+                            "bower_components",
+                            "node_modules",
+                            "resources",
+                            "bower.json",
+                            "Gemfile",
+                            "Gemfile.lock",
+                            "gulpfile.js",
+                            "package.json",
+                            "README.md"
+                        ]
+keep_files:             []
+encoding:               "utf-8"
+markdown_ext:           "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts:            null
+limit_posts:            0
+future:                 true
+unpublished:            false
+
+# Plugins
+whitelist:              []
+gems:                   []
 
 # Build settings
-markdown: kramdown
+markdown:               kramdown
+# permalink:              /:year/:month/:title
+# paginate_path:          /page:num
+# paginate:               10
+# timezone:               America/New_York
+# recent_post_limit:      5
+
+# quiet:                  false
+# defaults:               []
