@@ -1,5 +1,7 @@
-$raleway-font-path: '../fonts' !default;
-@import "raleway"
+//$raleway-font-path: '../fonts' !default;
+//@import "raleway"
+
+@import "roboto-fontface.scss"
 
 @import "bootstrap/variables"
 @import "bootstrap"
@@ -104,3 +106,8 @@ h1 small, .h1 small
 
 .well
   color: white;
+
+// ---- Content
+.content
+    background: #fff;
+    @include box-shadow(0 1px 10px rgba(0,0,0,0.15));

@@ -47,7 +47,8 @@ gulp.task('fonts', function() { 
     return gulp.src([
                     config.bowerDir + '/font-awesome/fonts/**.*',
                     config.bowerDir + '/bootstrap-sass/assets/fonts/bootstrap/**.*',
-                    config.bowerDir + '/fonts-raleway/fonts/fonts-raleway/**.*'
+                    config.bowerDir + '/fonts-raleway/fonts/fonts-raleway/**.*',
+                    config.bowerDir + '/roboto-fontface/fonts/**.*',
                 ]) 
                .pipe(gulp.dest('./assets/fonts')); 
 });
@@ -62,6 +63,7 @@ gulp.task('css', function() { 
                         config.bowerDir + '/bootstrap-sass/assets/stylesheets',
                         config.bowerDir + '/font-awesome/scss',
                        config.bowerDir + '/fonts-raleway/scss',
+                       config.bowerDir + '/roboto-fontface/css',
                     ]
                     }))
                .on('error', notify.onError(function(error) {
