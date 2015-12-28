@@ -16,7 +16,7 @@ sitemap:
     include:            ["/index.html"]
 
 # Where things are
-source:                 .
+source:                 ./project
 destination:            ./_site
 layouts_dir:                ./_layouts
 plugins_dir:                ./_plugins

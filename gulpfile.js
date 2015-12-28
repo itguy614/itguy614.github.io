@@ -1,95 +1,68 @@
-var
-    autoprefixer = require('gulp-autoprefixer')
-    bower = require('gulp-bower')
-    gulp = require('gulp'),
-    minifier = require('gulp-minify-css')
-    notify = require("gulp-notify")
-    rename = require('gulp-rename')
-    sass = require('gulp-sass')
-    sourcemaps = require('gulp-sourcemaps')
-    iffer = require('gulp-if')
-    ;
+var     gulp            = require('gulp'),
+        gutil           = require('gulp-util'),
+        requireDir      = require('require-dir')
+        gulpAutoTask    = require('gulp-auto-task'),
 
-var config = {
-     sassPath: './resources/sass',
-     bowerDir: './bower_components' ,
-    production: false,
-    sourcemaps: {
-        enabled: true
-    },
-    autoprefixer: {
-        enabled: true,
-        pluginOptions: {
-            browsers: ['last 2 versions'],
-            cascade: false
-        }
-    },
-    minifier: {
-        pluginOptions: {
-            processImport: false
-        }
-    },
-    sass: {
-        pluginOptions: {
-            outputStyle: 'nested',
-            precision: 10
-        }
-    }
-}
+        browserSync     = require('browser-sync').create('jekyll'),
+        runSequence     = require('run-sequence'),
+        watch           = require('gulp-watch'),
 
-gulp.task('default', ['bower', 'fonts', 'css']);
+        settings        = require('./_settings.json');
 
-gulp.task('bower', function() { 
-    return bower().pipe(gulp.dest(config.bowerDir)) 
+/* Import main tasks */
+var     utils           = requireDir('gulp-tasks');
+
+gulpAutoTask('{*,**/*}.js', {
+    base: settings.paths.tasks,
+    gulp: gulp
 });
 
-gulp.task('fonts', function() { 
-    return gulp.src([
-                    config.bowerDir + '/font-awesome/fonts/**.*',
-                    config.bowerDir + '/bootstrap-sass/assets/fonts/bootstrap/**.*',
-                    config.bowerDir + '/fonts-raleway/fonts/fonts-raleway/**.*',
-                    config.bowerDir + '/roboto-fontface/fonts/**.*',
-                ]) 
-               .pipe(gulp.dest('./assets/fonts')); 
+gulp.task('default', function(callback) {
+    runSequence(['build', 'buildFonts', 'buildCss', 'buildJs']);
 });
 
-gulp.task('css', function() { 
-    return gulp.src(config.sassPath + '/app.sass')
-               .pipe(iffer(config.sourcemaps.enabled, sourcemaps.init()))
-                .pipe(sass({
-                    outputStyle: 'compact',
-                    includePaths: [
-                        './resources/sass',
-                        config.bowerDir + '/bootstrap-sass/assets/stylesheets',
-                        config.bowerDir + '/font-awesome/scss',
-                       config.bowerDir + '/fonts-raleway/scss',
-                       config.bowerDir + '/roboto-fontface/css',
-                    ]
-                    }))
-               .on('error', notify.onError(function(error) {
-                    console.log('\n' + error);
-                    return {
-                        title: 'Gulp',
-                        subtitle: 'Failure',
-                        message: 'An error occured during the CSS build.',
-                        sound: 'Frog'
-                    };
-                }))
-               .pipe(iffer(config.autoprefixer.enabled, autoprefixer(config.autoprefixer.pluginOptions)))
-               .pipe(iffer(config.production, minifier(config.minifier.pluginOptions)))
-               .pipe(iffer(config.sourcemaps.enabled, sourcemaps.write('.')))
-               .pipe(gulp.dest('./assets/css'))
-               .pipe(notify({
-                    title: 'Gulp',
-                    subtitle: 'Success',
-                    message: 'CSS Build Complete',
-                    sound: 'Pop'
-                }))
-               ;
+gulp.task('build', function(callback) {
+    return utils.buildJekyll(callback);
 });
 
+gulp.task('build:clean', ['clean']);
 
+gulp.task('build:assets', function() {
+    runSequence(['buildFonts', 'buildCss', 'buildJs', 'buildImg']);
+});
 
-gulp.task('watch', function() {
-    return gulp.watch(config.sassPath + '/**/*.sass', ['css']);
+/** Browser Sync */
+
+gulp.task('browser', function() {
+    browserSync.init({
+        server: settings.paths.dest.jekyll
+    });
+});
+
+gulp.task('browser:reload', function() {
+    browserSync.reload();
+});
+
+/** Server entry */
+
+gulp.task('serve', ['browser'], function() {
+
+    runSequence(['build', 'build:assets'], 'browser:reload');
+
+    watch(settings.paths.src.sass + "/*/**.*", function() {
+        runSequence('buildCss', ['browser:reload']);
+    });
+
+    watch(settings.paths.src.js_include, function() {
+        runSequence('buildJs', ['browser:reload']);
+    });
+
+    watch(settings.paths.src.img + "/*/**.*", function() {
+        runSequence('buildImg', ['browser:reload']);
+    });
+
+    watch(settings.paths.src.jekyll, function() {
+        runSequence(['build', 'build:assets'], 'browser:reload');
+    });
+
 });
