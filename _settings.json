@@ -11,6 +11,7 @@
             "fonts": [
                 "./_assets/fonts/**.*",
                 "./bower_components/bootstrap-sass/assets/fonts/bootstrap/**.*",
+                "./bower_components/nanogallery/css/font/**.*",
                 "./bower_components/fonts-raleway/fonts/fonts-raleway/**.*",
                 "./bower_components/roboto-fontface/fonts/**.*"
             ],
@@ -32,6 +33,7 @@
             "js_include": [
                 "./bower_components/jquery/dist/jquery.js",
                 "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+                "./bower_components/nanogallery/jquery.nanogallery.js",
                 "./_assets/js/**.*"
             ],
 
@@ -42,7 +44,8 @@
                 "./_assets/sass",
                 "./bower_components/bootstrap-sass/assets/stylesheets",
                 "./bower_components/font-awesome/scss",
-                "./bower_components/roboto-fontface/css"
+                "./bower_components/roboto-fontface/css",
+                "./bower_components/nanogallery/css"
             ]
 
         },
