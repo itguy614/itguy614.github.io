@@ -1,0 +1,38 @@
+<div>
+    {% for post in paginator.posts %}
+        {% unless post.url == page.url %}
+            <article>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3><small class="text-muted pull-right"><time datetime="{{ post.date || date:'%Y-%m-%d' }}">{{ post.date | date: '%d %b %Y' }}</time></small></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{{ post.excerpt }}</p>
+                    </div>
+                </div>
+            </article>
+        {% endunless %}
+    {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div>
+    <ul class="pager">
+        {% if paginator.previous_page %}
+            <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous</a></li>
+        {% else %}
+            <li class="previous disabled"><a href="#">&larr; Previous</a></li>
+        {% endif %}
+        {% if paginator.next_page %}
+            <li class="next"><a href="/page{{ paginator.next_page }}">Next &rarr;</a></li>
+        {% else %}
+            <li class="next disabled"><a href="#">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+</div>
+{% endif %}
