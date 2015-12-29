@@ -12,31 +12,29 @@ I was experimenting with the Apple Server application for Mac OS 10.10.  It is n
 
 This was interesting.  When I opened up that file it still referenced the Apache installation that came along with Server.app.  I was able to restore get things going by updating that file with the following contents.
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Disabled</key>
-    <true/>
-    <key>Label</key>
-    <string>org.apache.httpd</string>
-    <key>EnvironmentVariables</key>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
     <dict>
-        <key>XPC_SERVICES_UNAVAILABLE</key>
-        <string>1</string>
+        <key>Disabled</key>
+        <true/>
+        <key>Label</key>
+        <string>org.apache.httpd</string>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>XPC_SERVICES_UNAVAILABLE</key>
+            <string>1</string>
+        </dict>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/sbin/httpd</string>
+            <string>-D</string>
+            <string>FOREGROUND</string>
+        </array>
+        <key>OnDemand</key>
+        <false/>
     </dict>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/usr/sbin/httpd</string>
-        <string>-D</string>
-        <string>FOREGROUND</string>
-    </array>
-    <key>OnDemand</key>
-    <false/>
-</dict>
-</plist>
-```
+    </plist>
 
 After that, kill ant httpd process that is running and then start the webserver.
 
