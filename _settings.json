@@ -4,7 +4,7 @@
 
     "paths": {
 
-        "tasks": "./gulp-tasks",
+        "tasks": "./_gulp-tasks",
 
         "src": {
 
@@ -48,11 +48,11 @@
         },
 
         "dest": {
-            "css": "./_site/assets/css",
-            "fonts": "./_site/assets/fonts",
+            "css": "./assets/css",
+            "fonts": "./assets/fonts",
             "jekyll": "./_site",
-            "js": "./_site/assets/js",
-            "img": "./_site/assets/img"
+            "js": "./assets/js",
+            "img": "./assets/img"
         }
 
     },
