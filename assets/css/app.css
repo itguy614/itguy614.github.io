@@ -4015,7 +4015,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .fa-percent:before { content: ""; }
 
-body { font-weight: 500; }
+body { font-weight: 500; padding-top: 80px; }
 
 .lead { font-weight: 300; }
 
@@ -4043,6 +4043,16 @@ h1 small, .h1 small { font-weight: 500; color: #51adf6; }
 
 .label { border-radius: 0; }
 
+.label-primary { background: #2196f3; }
+
+.label-success { background: #6bb85c; }
+
+.label-info { background: #5b94de; }
+
+.label-warning { background: #f0854e; }
+
+.label-danger { backgrounf: #d94f79; }
+
 .pagination > li > a { border-width: 0; border-bottom-width: 3px; }
 
 .pagination > li > a:first-child { border-left-width: 0; }
@@ -4060,5 +4070,7 @@ h1 small, .h1 small { font-weight: 500; color: #51adf6; }
 .well { color: white; }
 
 .content { background: #fff; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15); }
+
+.post-header { padding-bottom: 1em; }
 
 /*# sourceMappingURL=app.css.map */
