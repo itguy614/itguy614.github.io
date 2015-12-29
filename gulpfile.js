@@ -35,7 +35,7 @@ gulp.task('build:assets', function() {
 
 gulp.task('browser', function() {
     browserSync.init({
-        server: settings.paths.dest.jekyll
+        server: "./_site"
     });
 });
 
@@ -57,12 +57,12 @@ gulp.task('serve', ['browser'], function() {
         runSequence('buildJs', ['browser:reload']);
     });
 
-    watch(settings.paths.src.img + "/*/**.*", function() {
-        runSequence('buildImg', ['browser:reload']);
-    });
-
     watch(settings.paths.src.jekyll, function() {
         runSequence(['build', 'build:assets'], 'browser:reload');
+    });
+
+    watch(settings.paths.src.img + "/*/**.*", function() {
+        runSequence('buildImg', ['browser:reload']);
     });
 
 });

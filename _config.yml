@@ -16,18 +16,18 @@ sitemap:
     include:            ["/index.html"]
 
 # Where things are
-source:                 ./project
+source:                 ./
 destination:            ./_site
-layouts_dir:                ./_layouts
-plugins_dir:                ./_plugins
+layouts_dir:            ./_layouts
+plugins_dir:            ./_plugins
 
 # Handling Reading
-safe:                   false
+safe:                   true
 include:                [".htaccess"]
 exclude:                [
                             "bower_components",
                             "node_modules",
-                            "resources",
+                            "gulp-tasks",
                             "bower.json",
                             "Gemfile",
                             "Gemfile.lock",
@@ -35,7 +35,12 @@ exclude:                [
                             "package.json",
                             "README.md"
                         ]
-keep_files:             []
+keep_files:             [
+                            "assets/css",
+                            "assets/fonts",
+                            "assets/img",
+                            "assets/js"
+                        ]
 encoding:               "utf-8"
 markdown_ext:           "markdown,mkdown,mkdn,mkd,md"
 

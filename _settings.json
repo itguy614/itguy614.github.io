@@ -9,38 +9,37 @@
         "src": {
 
             "fonts": [
-                "./project/_assets/fonts/**.*",
+                "./_assets/fonts/**.*",
                 "./bower_components/bootstrap-sass/assets/fonts/bootstrap/**.*",
                 "./bower_components/fonts-raleway/fonts/fonts-raleway/**.*",
                 "./bower_components/roboto-fontface/fonts/**.*"
             ],
 
             "jekyll": [
-                "./project/*",
-                "./project/**/*.html",
-                "./project/**/*.md",
-                "./project/_data/*",
-                "./project/_includes/**/*.md",
-                "./project/_includes/**/*.md",
-                "./project/_layouts/**/*.md",
-                "./project/_layouts/**/*.md",
-                "./project/_plugins/*",
-                "./project/_posts/**/*.md",
-                "./project/_posts/**/*.md"
+                "./*.html",
+                "./*.md",
+                "./_data/*",
+                "./_includes/**/*.html",
+                "./_includes/**/*.md",
+                "./_layouts/**/*.html",
+                "./_layouts/**/*.md",
+                "./_plugins/*",
+                "./_posts/**/*.html",
+                "./_posts/**/*.md"
             ],
 
-            "js": "./project/_assets/js",
+            "js": "./_assets/js",
             "js_include": [
                 "./bower_components/jquery/dist/jquery.js",
                 "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
-                "./project/_assets/js/**.*"
+                "./_assets/js/**.*"
             ],
 
-            "img": "./project/_assets/img",
+            "img": "./_assets/img",
 
-            "sass": "./project/_assets/sass",
+            "sass": "./_assets/sass",
             "sass_include": [
-                "./project/_assets/sass",
+                "./_assets/sass",
                 "./bower_components/bootstrap-sass/assets/stylesheets",
                 "./bower_components/font-awesome/scss",
                 "./bower_components/roboto-fontface/css"
