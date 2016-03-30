@@ -17,7 +17,8 @@ layout: default
             <div class="col-md-8">
                 <div class="pull-right">
                 {% for category in page.categories %}
-                    <a href="/category/{{ category }}"  class="label label-default">{{ category }}</a>
+                <!-- <a href="/category/{{ category }}"  class="label label-default">{{ category }}</a> -->
+                    <span class="label label-default">{{ category }}</span>
                 {% endfor %}
                 </div>
             </div>
