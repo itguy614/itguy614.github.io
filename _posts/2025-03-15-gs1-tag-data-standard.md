@@ -1,7 +1,7 @@
 ---
 layout: post
 menubar_toc: true
-series: rfid_blog_series
+series: rfid-basics-for-pharma
 hero_image: /assets/images/rfid-blog-series-hero.png
 hero_darken: true
 title: GS1 Tag Data Standard (TDS) for Unit-of-Use Pharmaceuticals

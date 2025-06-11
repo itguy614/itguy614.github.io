@@ -1,7 +1,7 @@
 ---
 layout: post
 menubar_toc: true
-series: rfid_blog_series
+series: rfid-basics-for-pharma
 hero_image: /assets/images/rfid-blog-series-hero.png
 hero_darken: true
 title: RFID in Pharmaceuticals
