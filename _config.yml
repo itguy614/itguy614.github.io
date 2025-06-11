@@ -9,6 +9,7 @@ baseurl: ""
 url: "http://wolfienet.com"
 
 theme: bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme@v1.0.0
 fixed_navbar: top
 
 plugins:
