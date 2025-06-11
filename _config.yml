@@ -8,8 +8,9 @@ description: >-
 baseurl: ""
 url: "http://wolfienet.com"
 
+author: Kurt Wolf
+
 theme: bulma-clean-theme
-# remote_theme: chrisrhymes/bulma-clean-theme@v1.0.0
 fixed_navbar: top
 
 plugins:
@@ -30,13 +31,6 @@ exclude:
     - vendor/gems/
     - vendor/ruby/
 
-twitter: itguy614
-repo: https://github.com/itguy614/itguy614.github.io
-github_user: itguy614
-github_repo: itguy614.github.io
-
-github_branch: develop
-
 permalink: /:year/:title
 
 markdown: kramdown
@@ -48,7 +42,3 @@ paginate: 5
 paginate_path: "/blog/page:num"
 
 livereload: true
-
-social:
-  facebook: https://www.facebook.com/itguy614
-  instagram: itguy614

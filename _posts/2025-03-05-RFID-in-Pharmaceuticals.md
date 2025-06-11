@@ -2,14 +2,15 @@
 layout: post
 menubar_toc: true
 series: rfid_blog_series
+hero_image: /assets/images/rfid-blog-series-hero.png
+hero_darken: true
 title: RFID in Pharmaceuticals
 subtitle: Understanding Drug Identification Methods
+author: Kurt Wolf
 summary: |-
     RFID technology is revolutionizing pharmaceutical supply chains, but its impact depends heavily on how drug data is encoded on RFID tags. This blog post explores three primary encoding methods—license plate, RAIN, and GS1—and compares their benefits and limitations. While license plate and RAIN models offer cost savings and moderate interoperability, they rely on external databases, creating long-term challenges. The GS1 standard, by contrast, embeds key drug details directly in the tag, enabling seamless, standards-based tracking across systems. For pharmaceutical companies aiming to future-proof operations and meet global regulatory requirements, GS1 offers the most scalable and interoperable solution.
 tags: GS1 RFID TDS EPC DSCSA RAIN
 ---
-## Introduction
-
 Radio Frequency Identification (RFID) technology has become a transformative force in the pharmaceutical industry, enhancing drug traceability, inventory management, and patient safety. However, the effectiveness of RFID tagging in pharmaceuticals heavily depends on how drug information is encoded within the Electronic Product Code (EPC) data on RFID tags. There are three primary methods of RFID-based drug identification: the license plate model, the RAIN standard, and the GS1 standard. Each approach has its own advantages and limitations, influencing interoperability, cost, and data accessibility. In this article, we will explore each of these methods in detail, examining their implementation, benefits, and challenges, while highlighting why open standards like GS1 offer the most long-term value.
 
 ## License Plate Model
@@ -47,6 +48,8 @@ While proprietary and semi-open models like the license plate method and RAIN st
 - **Interoperability**: Unlike closed or proprietary systems, GS1 ensures that any authorized system can read and process EPC data without database dependencies.
 - **Cost Savings Over Time**: While GS1 may require slightly higher upfront tag costs, it eliminates costly database maintenance, vendor lock-in, and future migration challenges.
 - **Future-Proofing**: Open standards facilitate integration with emerging technologies like blockchain, IoT, and AI-driven analytics, ensuring continued relevance and adaptability.
+
+---
 
 ## Conclusion
 

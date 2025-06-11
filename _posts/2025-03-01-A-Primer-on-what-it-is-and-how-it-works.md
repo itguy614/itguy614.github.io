@@ -2,7 +2,10 @@
 layout: post
 menubar_toc: true
 series: rfid_blog_series
-title: A Primer on What It Is and How It Works
+hero_image: /assets/images/rfid-blog-series-hero.png
+hero_darken: true
+title: A Primer on What RFID Is and How It Works
+author: Kurt Wolf
 summary: |-
     RFID technology is revolutionizing pharmaceutical supply chains by enabling automated, accurate, and secure tracking of drug products. Unlike barcodes, RFID tags can be read in bulk, at a distance, and without line-of-sight, making them ideal for improving inventory management, verifying authenticity, and ensuring regulatory compliance. This introductory blog post breaks down how RFID works, the different types of tags, and why it’s especially valuable in meeting U.S. DSCSA and EU FMD requirements for unit-level traceability. As the series continues, it will explore how RFID supports compliance, standardization, and practical implementation across healthcare logistics.
 tags: GS1 RFID TDS EPC DSCSA RAIN

@@ -2,21 +2,19 @@
 layout: post
 menubar_toc: true
 series: rfid_blog_series
+hero_image: /assets/images/rfid-blog-series-hero.png
+hero_darken: true
 title: GS1 Tag Data Standard (TDS) for Unit-of-Use Pharmaceuticals
 subtitle: A Primer on EPC 1.x and 2.x Encoding Formats
 summary: |-
     As pharmaceutical supply chains shift toward unit-level traceability under regulations like DSCSA and the FMD, the structure of RFID-encoded drug data is becoming crucial. This post explains how GS1's EPC encoding formats—SGTIN-96, SGTIN-96+, and SGTIN-198—impact drug serialization and compliance. While SGTIN-96 requires external databases, SGTIN-96+ adds expiration and lot number data to user memory for offline verification. However, EPC 2.x’s SGTIN-198 format fully embeds all critical data within the tag itself, offering the most standardized, compliant, and future-ready solution. For long-term interoperability and regulatory alignment, EPC 2.x is the recommended path forward.
 tags: GS1 RFID TDS EPC
 ---
-## Introduction
-
 As **pharmaceutical supply chains move toward full electronic traceability**, **unit-of-use drug identification** has become a critical focus under regulations like the **Drug Supply Chain Security Act (DSCSA)** in the U.S. and the **Falsified Medicines Directive (FMD)** in the EU.
 
 The **GS1 Tag Data Standard (TDS)** defines how **Electronic Product Codes (EPCs)** are structured on **RFID tags**, ensuring **standardized, interoperable, and efficient drug tracking** at the individual **unit-of-use level** (i.e., the smallest saleable package of a drug, such as a vial, syringe, or blister pack).
 
 This document provides a **primer on EPC 1.x and 2.x encoding formats** for **unit-of-use pharmaceutical tagging**, explaining **how GTIN, serial numbers, expiration dates, and lot numbers are structured** and why **EPC 2.x is the preferred format for future compliance**.
-
----
 
 ## GS1 EPC Encoding for Unit-of-Use Pharmaceuticals
 
@@ -26,8 +24,6 @@ GS1 defines **two primary encoding versions** for **unit-of-use drug identificat
 2. **EPC 2.x** (Enhanced, self-contained, and future-proofed for compliance)
 
 Each version specifies **how product data is encoded on RFID tags**, impacting **real-time verification, regulatory compliance, and supply chain interoperability**.
-
----
 
 ## 1. EPC 1.x Encoding for Unit-of-Use Drugs
 
@@ -79,8 +75,6 @@ To address **SGTIN-96’s limitations**, **SGTIN-96+** extends the standard EPC 
 
 While **SGTIN-96+ is a significant improvement**, it **does not provide as much standardization as EPC 2.x** since **user memory formatting can vary between implementations**.
 
----
-
 ## 2. EPC 2.x Encoding for Unit-of-Use Drugs
 
 EPC 2.x encoding formats were introduced to **address the shortcomings of EPC 1.x**, providing **full serialization and product traceability within the EPC memory itself**, without reliance on **user memory or external databases**.
@@ -109,7 +103,7 @@ SGTIN-96+ provides **a practical improvement over SGTIN-96**, but **SGTIN-198 is
 
 ---
 
-## **Conclusion**
+## Conclusion
 
 SGTIN-96+ offers **a short-term solution** by storing **expiration and lot number in user memory**, removing **database reliance**. However, for **long-term compliance and interoperability**, **SGTIN-198 (EPC 2.x) is the superior choice**[5].
 
