@@ -5,6 +5,12 @@ permalink: /
 show_sidebar: true
 ---
 
+{%  include notification.html
+status="is-info"
+message="
+Check out the blog series: **\"[RFID Basics For Pharma](/rfid-basics-for-pharma)\"**.
+" %}
+
 ## `# whois kwolf`
 
 Kurt Wolf is a dynamic leader in business and technology, known for driving innovation with purpose and clarity. With deep experience spanning executive leadership, product development, and strategic operations, Kurt brings a thoughtful and results-driven approach to every challenge he takes on. He has built a reputation for aligning technology with real-world needs, empowering teams, and turning vision into measurable outcomes.
