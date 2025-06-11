@@ -11,6 +11,24 @@ url: "http://wolfienet.com"
 theme: bulma-clean-theme
 fixed_navbar: top
 
+plugins:
+    - jekyll-sitemap
+    - jekyll-paginate
+    - jekyll-feed
+    - jekyll-seo-tag
+    - kramdown-parser-gfm
+    - jekyll-redirect-from
+
+exclude:
+    - Gemfile
+    - clean-theme.gemspec
+    - Gemfile.lock
+    - node_modules
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+
 twitter: itguy614
 repo: https://github.com/itguy614/itguy614.github.io
 github_user: itguy614
