@@ -1,0 +1,35 @@
+destination: _site
+
+title: Musing of Kurt Wolf
+email: itguy614@gmail.com
+description: >-
+  Musings of Kurt Wolf, a collection of thoughts, ideas, and reflections on
+  various topics including technology, life, and personal experiences.
+baseurl: ""
+url: "http://wolfienet.com"
+
+theme: bulma-clean-theme
+fixed_navbar: top
+
+twitter: itguy614
+repo: https://github.com/itguy614/itguy614.github.io
+github_user: itguy614
+github_repo: itguy614.github.io
+
+github_branch: develop
+
+permalink: /:year/:title
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+livereload: true
+
+social:
+  facebook: https://www.facebook.com/itguy614
+  instagram: itguy614
