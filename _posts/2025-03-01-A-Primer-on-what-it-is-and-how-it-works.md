@@ -22,9 +22,9 @@ RFID stands for **Radio Frequency Identification**. It’s a technology that use
 
 At a high level, an RFID system consists of three main components:
 
-1. **Tag (Transponder)** – A small electronic device embedded in or attached to an item. It contains a microchip for data storage and an antenna for communication.
-2. **Reader (Interrogator)** – A device that emits radio waves to power the tag and receive the data stored on it.
-3. **Middleware/System Software** – Connects the RFID reader to databases or enterprise systems to interpret and act on the data.
+1. **Tag (Transponder)** - A small electronic device embedded in or attached to an item. It contains a microchip for data storage and an antenna for communication.
+2. **Reader (Interrogator)** - A device that emits radio waves to power the tag and receive the data stored on it.
+3. **Middleware/System Software** - Connects the RFID reader to databases or enterprise systems to interpret and act on the data.
 
 ---
 
@@ -43,9 +43,9 @@ Here’s a simple step-by-step of how RFID functions in practice:
 
 RFID tags come in several types, with the most common being:
 
-* **Passive RFID** – No onboard power source. Activated by the reader's energy. Widely used in pharma due to low cost.
-* **Active RFID** – Battery-powered tags that continuously broadcast signals. Useful for high-value items or cold chain tracking.
-* **Semi-Passive (Battery-Assisted Passive)** – Use batteries to power the chip but not to transmit, bridging the gap between passive and active.
+* **Passive RFID** - No onboard power source. Activated by the reader's energy. Widely used in pharma due to low cost.
+* **Active RFID** - Battery-powered tags that continuously broadcast signals. Useful for high-value items or cold chain tracking.
+* **Semi-Passive (Battery-Assisted Passive)** - Use batteries to power the chip but not to transmit, bridging the gap between passive and active.
 
 RFID also operates on different frequency ranges, with **UHF (Ultra High Frequency)** being most common for pharmaceutical logistics due to its read range and data rate.
 
@@ -55,10 +55,10 @@ RFID also operates on different frequency ranges, with **UHF (Ultra High Frequen
 
 The pharmaceutical industry faces increasing regulatory scrutiny (e.g., **DSCSA in the U.S.**, **FMD in the EU**) requiring serialized tracking and full traceability at the **unit level**. RFID enables:
 
-* **Automated inventory management** – Faster, more accurate scanning compared to barcodes.
-* **Expiration and recall tracking** – Real-time insight into stock nearing expiration or involved in recalls.
-* **Tamper and diversion prevention** – Serialized tags help verify authenticity and flag anomalies.
-* **Cold chain compliance** – When paired with sensors, RFID can log and transmit temperature exposure.
+* **Automated inventory management** - Faster, more accurate scanning compared to barcodes.
+* **Expiration and recall tracking** - Real-time insight into stock nearing expiration or involved in recalls.
+* **Tamper and diversion prevention** - Serialized tags help verify authenticity and flag anomalies.
+* **Cold chain compliance** - When paired with sensors, RFID can log and transmit temperature exposure.
 
 ---
 
