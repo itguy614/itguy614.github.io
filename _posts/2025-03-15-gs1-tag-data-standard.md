@@ -10,33 +10,33 @@ summary: |-
     As pharmaceutical supply chains shift toward unit-level traceability under regulations like DSCSA and the FMD, the structure of RFID-encoded drug data is becoming crucial. This post explains how GS1's EPC encoding formats—SGTIN-96, SGTIN-96+, and SGTIN-198—impact drug serialization and compliance. While SGTIN-96 requires external databases, SGTIN-96+ adds expiration and lot number data to user memory for offline verification. However, EPC 2.x’s SGTIN-198 format fully embeds all critical data within the tag itself, offering the most standardized, compliant, and future-ready solution. For long-term interoperability and regulatory alignment, EPC 2.x is the recommended path forward.
 tags: GS1 RFID TDS EPC
 ---
-As **pharmaceutical supply chains move toward full electronic traceability**, **unit-of-use drug identification** has become a critical focus under regulations like the **Drug Supply Chain Security Act (DSCSA)** in the U.S. and the **Falsified Medicines Directive (FMD)** in the EU.
+As pharmaceutical supply chains move toward full electronic traceability, unit-of-use drug identification has become a critical focus under regulations like the Drug Supply Chain Security Act (DSCSA) in the U.S. and the Falsified Medicines Directive (FMD) in the EU.
 
-The **GS1 Tag Data Standard (TDS)** defines how **Electronic Product Codes (EPCs)** are structured on **RFID tags**, ensuring **standardized, interoperable, and efficient drug tracking** at the individual **unit-of-use level** (i.e., the smallest saleable package of a drug, such as a vial, syringe, or blister pack).
+The GS1 Tag Data Standard (TDS) defines how Electronic Product Codes (EPCs) are structured on RFID tags, ensuring standardized, interoperable, and efficient drug tracking at the individual unit-of-use level (i.e., the smallest saleable package of a drug, such as a vial, syringe, or blister pack).
 
-This document provides a **primer on EPC 1.x and 2.x encoding formats** for **unit-of-use pharmaceutical tagging**, explaining **how GTIN, serial numbers, expiration dates, and lot numbers are structured** and why **EPC 2.x is the preferred format for future compliance**.
+This document provides a primer on EPC 1.x and 2.x encoding formats for unit-of-use pharmaceutical tagging, explaining how GTIN, serial numbers, expiration dates, and lot numbers are structured and why EPC 2.x is the preferred format for future compliance.
 
 ## GS1 EPC Encoding for Unit-of-Use Pharmaceuticals
 
-GS1 defines **two primary encoding versions** for **unit-of-use drug identification**:
+GS1 defines two primary encoding versions for unit-of-use drug identification:
 
 1. **EPC 1.x** (Older, widely adopted but traditionally database-dependent)
 2. **EPC 2.x** (Enhanced, self-contained, and future-proofed for compliance)
 
-Each version specifies **how product data is encoded on RFID tags**, impacting **real-time verification, regulatory compliance, and supply chain interoperability**.
+Each version specifies how product data is encoded on RFID tags, impacting real-time verification, regulatory compliance, and supply chain interoperability.
 
 ## 1. EPC 1.x Encoding for Unit-of-Use Drugs
 
-EPC 1.x formats provide **basic serialization** for pharmaceuticals, but they **lack embedded expiration and lot number details in the standard EPC memory**, requiring **external databases for full drug identification**[1].
+EPC 1.x formats provide basic serialization for pharmaceuticals, but they lack embedded expiration and lot number details in the standard EPC memory, requiring external databases for full drug identification[1].
 
-However, an **enhanced approach**, **SGTIN-96+**, allows **expiration and lot number storage in the tag’s user memory**, addressing this limitation.
+However, an enhanced approach, SGTIN-96+, allows expiration and lot number storage in the tag’s user memory, addressing this limitation.
 
 ### SGTIN-96 (Serialized GTIN)
 
-- **Format:** 96-bit EPC
-- **Data Encoded in EPC Memory:**
-    - **GTIN (Global Trade Item Number, 14 digits)**
-    - **Unique Serial Number (38-bit)**
+- Format: 96-bit EPC
+- Data Encoded in EPC Memory:
+    - GTIN (Global Trade Item Number, 14 digits)
+    - Unique Serial Number (38-bit)
 - **How it Works:**
     - The **GTIN identifies the drug product** (e.g., a 50mg vial of a specific medication).
     - The **serial number uniquely identifies each unit** of that product.
@@ -54,7 +54,7 @@ However, an **enhanced approach**, **SGTIN-96+**, allows **expiration and lot nu
 
 ### SGTIN-96+ (SGTIN-96 with Additional Data in User Memory)
 
-To address **SGTIN-96’s limitations**, **SGTIN-96+** extends the standard EPC by **storing additional drug details in the tag’s user memory**[3].
+To address SGTIN-96’s limitations, SGTIN-96+ extends the standard EPC by storing additional drug details in the tag’s user memory[3].
 
 - **Format:** 96-bit EPC + Additional Data in User Memory
 - **Data Encoded in EPC Memory:**
@@ -77,7 +77,7 @@ While **SGTIN-96+ is a significant improvement**, it **does not provide as much 
 
 ## 2. EPC 2.x Encoding for Unit-of-Use Drugs
 
-EPC 2.x encoding formats were introduced to **address the shortcomings of EPC 1.x**, providing **full serialization and product traceability within the EPC memory itself**, without reliance on **user memory or external databases**.
+EPC 2.x encoding formats were introduced to address the shortcomings of EPC 1.x, providing full serialization and product traceability within the EPC memory itself, without reliance on user memory or external databases.
 
 ### SGTIN-198 (Serialized GTIN with Full Drug Data)
 
@@ -99,15 +99,15 @@ EPC 2.x encoding formats were introduced to **address the shortcomings of EPC 1.
 | **Compliance Readiness** | ⚠️ DSCSA-compliant but database-dependent | ✅ DSCSA-ready with embedded lot/expiry | ✅ Fully DSCSA-compliant with structured EPC data |
 | **Interoperability**     | ⚠️ Requires proprietary system lookup     | ⚠️ Depends on UM formatting standards  | ✅ Universally readable by GS1-compliant systems  |
 
-SGTIN-96+ provides **a practical improvement over SGTIN-96**, but **SGTIN-198 is the superior solution** for **global compliance and future scalability**.
+SGTIN-96+ provides a practical improvement over SGTIN-96, but SGTIN-198 is the superior solution for global compliance and future scalability.
 
 ---
 
 ## Conclusion
 
-SGTIN-96+ offers **a short-term solution** by storing **expiration and lot number in user memory**, removing **database reliance**. However, for **long-term compliance and interoperability**, **SGTIN-198 (EPC 2.x) is the superior choice**[5].
+SGTIN-96+ offers a short-term solution by storing expiration and lot number in user memory, removing database reliance. However, for long-term compliance and interoperability, SGTIN-198 (EPC 2.x) is the superior choice[5].
 
-By **adopting EPC 2.x encoding**, pharmaceutical companies can ensure:
+By adopting EPC 2.x encoding, pharmaceutical companies can ensure:
 
 ✔ **Seamless DSCSA compliance**
 

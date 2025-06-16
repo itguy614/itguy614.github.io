@@ -17,7 +17,7 @@ Kurt Wolf is a dynamic leader in business and technology, known for driving inno
 
 At his core, Kurt is fueled by curiosity and a genuine passion for solving complex problems. Whether architecting secure SaaS solutions, optimizing medical supply chains, or mentoring emerging talent, he approaches each opportunity with hands-on engagement and a commitment to continuous improvement. He’s not just focused on what works today—he’s constantly exploring what’s next.
 
-Beyond his professional life, Kurt is a proud father to two amazingly curious children and a devoted husband to his loving wife. Family is his foundation, and it inspires much of his drive and dedication. He’s also actively involved in community service, serving as a board member for Feed The Kids Columbus, an organization working to end childhood hunger locally.
+Beyond his professional life, Kurt is a proud father to two amazingly curious children and a devoted husband to his loving wife. Family is his foundation, and it inspires much of his drive and dedication. He’s also actively involved in community service, serving as a board member for [Feed The Kids Columbus](https://feedthekidscolumbus.org), an organization working to end childhood hunger locally.
 
 Kurt believes that great ideas don’t just come from brilliance—they come from listening, learning, and working together toward a common goal. Whether in the boardroom, on the server, or around the dinner table, he leads with heart, purpose, and an eye toward meaningful impact.
 
