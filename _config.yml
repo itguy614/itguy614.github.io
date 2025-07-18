@@ -6,7 +6,9 @@ description: >-
   Musings of Kurt Wolf, a collection of thoughts, ideas, and reflections on
   various topics including technology, life, and personal experiences.
 baseurl: ""
-url: "http://wolfienet.com"
+url: "https://wolfienet.com"
+
+google_analytics: G-CEVH6TG4M7
 
 author: Kurt Wolf
 

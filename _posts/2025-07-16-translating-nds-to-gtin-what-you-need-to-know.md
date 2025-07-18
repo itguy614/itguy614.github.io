@@ -1,12 +1,12 @@
 ---
 layout: post
 menubar_toc: true
-title: Translating NDC-10 and NDC-11 to GTIN-14
-subtitle: What You Need to Know
+title: 'Translating NDC-10 and NDC-11 to GTIN-14: What You Need to Know'
 author: Kurt Wolf
 summary: |-
     Explains how to accurately convert National Drug Codes (NDC-10 and NDC-11) to GTIN-14 identifiers for use in GS1-compliant barcodes. It emphasizes the importance of using the officially assigned 11-digit NDC rather than inferring it from the 10-digit format. The article outlines the GTIN-14 structure, provides a detailed check digit calculation method, and includes Python code to automate the process. This guidance is essential for pharmaceutical serialization, traceability, and DSCSA compliance.
 ---
+
 The National Drug Code (NDC) system is a foundational part of pharmaceutical identification in the United States. However, when it comes to global serialization and barcoding, especially for unit-level tracking under DSCSA or for GS1-compliant barcodes like DataMatrix, you will often encounter the GTIN-14 (Global Trade Item Number). This post clarifies how to convert NDCs to GTINs, and just as importantly, when not to.
 
 ## What is a GTIN-14

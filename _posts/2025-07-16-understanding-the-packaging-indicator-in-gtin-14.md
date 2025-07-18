@@ -1,8 +1,7 @@
 ---
 layout: post
 menubar_toc: true
-title: Translating NDC-10 and NDC-11 to GTIN-14
-subtitle: Understanding the Packaging Indicator in GTIN-14
+title: 'Translating NDC-10 and NDC-11 to GTIN-14:  Understanding the Packaging Indicator in GTIN-14'
 author: Kurt Wolf
 summary: |-
     Understanding the packaging indicator in a GTIN-14 is essential for distinguishing pharmaceutical products across different packaging levels. From single-dose units to master cases, this leading digit encodes a product’s position in the packaging hierarchy—without changing its identity. Correct usage ensures seamless serialization, barcode accuracy, and DSCSA compliance. Whether labeling a vial or pallet, assigning the right packaging indicator is a small step with big implications for traceability and supply chain integrity.
