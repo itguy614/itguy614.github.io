@@ -33,20 +33,20 @@ Selecting the correct packaging indicator is **not arbitrary**. It should reflec
 
 1. Use `1` for the **lowest-level saleable unit**.
 2. Assign `2`, `3`, `4`, etc. for each higher-level packaging tier.
-3. All levels must share the **same product identifier** (such as the NDC-11) but differ in the indicator digit and check digit.
+3. All levels must share the **same product identifier** (the NDC-10) but differ in the indicator digit and check digit.
 4. Ensure consistency between packaging documentation and labeling systems.
 
 If multiple units contain the same product but are packaged differently, each package type must be assigned a **unique GTIN-14** using a different indicator digit.
 
 ### Example: Packaging Hierarchy for a Single NDC
 
-| Packaging Description  | Indicator | GTIN-14       |
-| ---------------------- | --------- | ------------- |
-| Single vial            | `1`       | 1012345678903 |
-| Box of 10 vials        | `3`       | 3012345678906 |
-| Master case (10 boxes) | `5`       | 5012345678900 |
+| Packaging Description  | Indicator | GTIN-14        |
+| ---------------------- | --------- | -------------- |
+| Single vial            | `1`       | 10312345678903 |
+| Box of 10 vials        | `3`       | 30312345678907 |
+| Master case (10 boxes) | `5`       | 50312345678901 |
 
-All three examples use the same base NDC-11: `01234567890`, but differ by packaging indicator and check digit.
+All three examples use the same NDC-10: `1234567890`, combined with the GS1 pharmaceutical prefix `03`. They differ by packaging indicator and check digit.
 
 ## Why It Matters
 

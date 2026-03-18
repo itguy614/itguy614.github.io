@@ -8,6 +8,8 @@ summary: |-
     As the U.S. drug supply chain grows more automated, the FDA is proposing a shift from the current 10- and 11-digit National Drug Code (NDC) formats to a standardized 12-digit structure. This change is driven by the looming exhaustion of 5-digit labeler codes and aims to enhance clarity, automation, and long-term sustainability. NDC 12 adopts a fixed 6-4-2 segment format, enabling better compatibility with GS1 standards, improved barcode readability, and seamless integration with traceability systems. The transition, expected to begin in 2025, will impact barcoding, GTINs, and data processing systems-requiring healthcare organizations to start preparing now.
 ---
 
+> **Update (March 2026):** Since this post was originally written, the FDA has published the **final rule** making NDC 12 official. The effective date is March 7, 2033, with a labeling transition period through March 6, 2036. The GS1 Application Identifier for carrying NDC-12 in barcodes has been finalized as **AI (715)**, not AI (714) as originally referenced below. The GTIN-14 structure and conversion guidance below have also been corrected—see [From NDC-10 to GTIN-14: What You Need to Know](/2025/translating-nds-to-gtin-what-you-need-to-know) for the full corrected walkthrough. For the NDC 12 ruling breakdown, see [NDC 12 Is Official: The FDA Final Rule and What Comes Next](/2026/fda-finalizes-ndc-12-what-it-means).
+
 The **National Drug Code (NDC)** is the universal identifier for drugs marketed in the United States. As healthcare systems become more automated and supply chains increasingly digitized, the structure and consistency of this code matter more than ever.
 
 But there’s a major shift coming-one driven not just by technology, but by **necessity**.
@@ -88,21 +90,22 @@ Most pharmaceutical barcodes today use the **Global Trade Item Number (GTIN)**, 
 
 ### Current Practice:
 
-* GTIN-14 = `0 + NDC11 + check digit`
+* GTIN-14 = `Indicator + 03 + NDC-10 + check digit` (14 digits total)
 * Embedded via GS1 AI **(01)**
 
 ### With NDC 12:
 
-* Systems will need to accommodate **12-digit NDCs**, either as part of a **modified GTIN strategy** or separately
+* The 12-digit NDC **cannot be embedded** inside the GTIN-14 structure—there is no room for the `03` prefix, a packaging indicator, and a check digit
+* Systems will need to carry the NDC as a **separate data element** alongside the GTIN
 
-To help with this, **GS1 has proposed a new Application Identifier**:
+To address this, **GS1 has introduced a new Application Identifier**:
 
 | AI  | Purpose          | Format    |
 | --- | ---------------- | --------- |
 | 01  | GTIN             | 14 digits |
-| 714 | **NDC-12** (new) | 12 digits |
+| 715 | **NDC-12** (new) | 12 digits |
 
-This new AI (714) would allow systems to **carry NDC-12 directly** alongside the GTIN, improving traceability, auditing, and serialization.
+AI (715) allows systems to **carry NDC-12 directly** alongside the GTIN, improving traceability, auditing, and serialization.
 
 > **Note:** This will affect barcode label generation, AIDC systems, and downstream integrations like EHRs, ERP systems, and pharmacy management platforms.
 
@@ -127,7 +130,7 @@ The FDA encourages system owners to begin **technical assessments and vendor out
 
 ✔️ **Coordinate with vendors**: Barcode software, ERP, and EDI platforms will all be impacted
 
-✔️ **Monitor GS1 AI updates**: Add support for AI **(714)** to future-proof barcode parsing
+✔️ **Monitor GS1 AI updates**: Add support for AI **(715)** to future-proof barcode parsing
 
 ---
 
